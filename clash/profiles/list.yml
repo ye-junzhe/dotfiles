@@ -1,0 +1,62 @@
+files:
+  - time: 1656840131278.yml
+    name: 弄子里
+    url: https://sub.ygjzjg.com/sub?target=clash&url=https%3A%2F%2Fapi.sztse.com%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D69673%26token%3DMa5obZE9coPN&config=https%3A%2F%2Fd.justxj.com%2Frules.ini
+    selected: []
+    interval: 24
+    subInfo: {}
+    cron: ""
+    headers: ""
+  - time: 1659249381552.yml
+    name: MUNIU
+    url: https://muniu.one/link/2Si9Q42uul1KcfUC?clash=1
+    selected:
+      - name: GLOBAL
+        now: 美国专线 A
+      - name: 🍃 Proxies
+        now: ⭐️ Auto
+      - name: 🍂 Domestic
+        now: DIRECT
+      - name: ☁️ Others
+        now: 🍃 Proxies
+    interval: 0
+    subInfo:
+      upload: 9457457096
+      download: 250796543995
+      total: 647536574464
+      expire: 1671172620
+    mode: rule
+    cron: ""
+    headers: ""
+  - time: 1661802633736.yml
+    name: Clash_1661802633.yaml
+    url: https://service-hw5h8eqy-1304230185.gz.apigw.tencentcs.com/link/TavrGGeH8o8PIXhN?clash=1
+    selected: []
+    interval: 0
+    subInfo:
+      upload: 8977941
+      download: 4204356676
+      total: 107379425280
+      expire: 1663066640
+  - time: 1662469079692.yml
+    name: New_MUNIU
+    url: https://muniu.click/link/2Si9Q42uul1KcfUC?clash=1
+    selected:
+      - name: GLOBAL
+        now: 日本专线 A
+      - name: 🍃 Proxies
+        now: ⭐️ Auto
+      - name: 🍂 Domestic
+        now: DIRECT
+      - name: ☁️ Others
+        now: 🍃 Proxies
+    interval: 0
+    subInfo:
+      upload: 14414996629
+      download: 313016305547
+      total: 649551937536
+      expire: 1671172620
+    cron: ""
+    headers: ""
+    mode: global
+index: 3
