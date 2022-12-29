@@ -36,7 +36,7 @@ shift + alt + ctrl - l : yabai -m window --warp east
 alt - r : yabai -m space --rotate 90
 
 # toggle window fullscreen zoom
-alt - f : yabai -m window --toggle zoom-fullscreen
+alt - m : yabai -m window --toggle zoom-fullscreen
 
 # alt - s : yabai -m window --toggle 
 alt - s : yabai -m window --toggle sticky;\
@@ -60,9 +60,21 @@ shift + alt - 0 : yabai -m space --balance
 # ctrl + alt - x  : yabai -m display --focus recent
 # ctrl + alt - z  : yabai -m display --focus prev
 # ctrl + alt - c  : yabai -m display --focus next
-ctrl + alt - 1  : yabai -m display --focus 1
-ctrl + alt - 2  : yabai -m display --focus 2
-ctrl + alt - 3  : yabai -m display --focus 3
+ctrl + lalt - 1 : DISPLAY="$(yabai -m query --displays --display | jq '.index')";\
+                  yabai -m window --space $((1+4*($DISPLAY - 1)));\
+                  sketchybar --trigger windows_on_spaces
+
+ctrl + lalt - 2 : DISPLAY="$(yabai -m query --displays --display | jq '.index')";\
+                  yabai -m window --space $((2+4*($DISPLAY - 1)));\
+                  sketchybar --trigger windows_on_spaces
+
+ctrl + lalt - 3 : DISPLAY="$(yabai -m query --displays --display | jq '.index')";\
+                  yabai -m window --space $((3+4*($DISPLAY - 1)));\
+                  sketchybar --trigger windows_on_spaces
+
+ctrl + lalt - 4 : DISPLAY="$(yabai -m query --displays --display | jq '.index')";\
+                  yabai -m window --space $((4+4*($DISPLAY - 1)));\
+                  sketchybar --trigger windows_on_spaces
 
 # 移动app至某窗口
 shift + alt - 1 : yabai -m window --space 1; yabai -m display --focus 1
@@ -102,3 +114,10 @@ alt - v : yabai -m window --insert south; skhd -k "cmd - n"
 
 shift + alt - space : sketchybar --bar hidden=toggle
 shift + alt - r : sketchybar --exit
+
+## Window Movement (shift + lalt - ...)
+ctrl + lalt - h : yabai -m window --warp west || $(yabai -m window --display west && sketchybar --trigger windows_on_spaces && yabai -m display --focus west && yabai -m window --warp last) || yabai -m window --move rel:-10:0
+ctrl + lalt - j : yabai -m window --warp south || $(yabai -m window --display south && sketchybar --trigger windows_on_spaces && yabai -m display --focus south) || yabai -m window --move rel:0:10
+ctrl + lalt - k : yabai -m window --warp north || $(yabai -m window --display north && sketchybar --trigger windows_on_spaces && yabai -m display --focus north) || yabai -m window --move rel:0:-10
+ctrl + lalt - l : yabai -m window --warp east || $(yabai -m window --display east && sketchybar --trigger windows_on_spaces && yabai -m display --focus east && yabai -m window --warp first) || yabai -m window --move rel:10:0
+
