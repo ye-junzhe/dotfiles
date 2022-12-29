@@ -50,7 +50,7 @@ yabai -m config window_gap                   8
 # Exclude problematic apps from being managed:
 yabai -m rule --add app="^(LuLu|Vimac|Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off
 yabai -m rule --add app="^(System Preferences)$" manage=off
-yabai -m rule --add app="^(系统偏好设置|备忘录|邮件|CleanMyMac X|计算器|Notion|QQ|微信|SwitchResX Control|Spotify|GitKraken)$" manage=off
+yabai -m rule --add app="^(Google Chrome|DeepL|系统偏好设置|备忘录|邮件|CleanMyMac X|计算器|Notion|QQ|微信|SwitchResX Control|Spotify|GitKraken)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
