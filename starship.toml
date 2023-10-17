@@ -1,0 +1,114 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[character]
+error_symbol = "[✗](bold red)"
+success_symbol = '[➜](bold green)'
+vicmd_symbol = "[ V](bold green)"
+
+[directory]
+truncate_to_repo = false
+read_only = '🔒'
+truncation_length = 0
+style = "bold italic blue"
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = false
+style = "bold italic red"
+
+[docker_context]
+symbol = " "
+format = "[$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[aws]
+symbol = "  "
+
+[git_branch]
+symbol = " "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_status]
+disabled = false
+conflicted = '⚔️ '
+ahead = '🏎️'
+behind = '🐢'
+diverged = '🖖'
+up_to_date = '✓'
+untracked = '🛰️'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '🪪'
+deleted = '🗑️'
+
+[git_commit]
+commit_hash_length = 0
+tag_disabled = true
+only_detached = true
+
+[battery]
+disabled = false
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[haskell]
+symbol = "λ "
+
+[python]
+disabled = false
+symbol = ' '
+
+[ruby]
+disabled = true
+symbol = ' '
+
+[cmake]
+format = '[$symbol($version )]($style)'
+disabled = true
+
+[git_metrics]
+format = '([+$added]($added_style)) ([-$deleted]($deleted_style)) '
+
+[rust]
+format = '[ $version](#CB4B16 bold) '
+
+[c]
+symbol = ''
+format = '[$symbol $name\($version\)]($style) '
+detect_files = ["CMakeLists.txt"]
+commands = [[ 'clang', '--version' ]]
+
+[conda]
+symbol = ' '
+format = '[$symbol$environment](dimmed yellow) '
+
+[nodejs]
+format = '[ $version](bold green) '
+
+[swift]
+symbol = "ﯣ "
+
+[lua]
+symbol = ''
+format = '[$symbol\($version\)](dimmed blue) '
