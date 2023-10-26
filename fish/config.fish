@@ -33,6 +33,7 @@ alias mvi="mpv -profile image"
 alias e="exit"
 alias cat="bat"
 alias ssc="nvim ~/.config/starship.toml"
+alias v="vifm"
 
 set -U EDITOR nvim
 set -U VISUAL nvim
@@ -154,14 +155,14 @@ set -x RANGER_LOAD_DEFAULT_RC false
 
 # vifm
 # NOTE: Remember that a function in shell is something you can call in terminal
-function v
-    set -l dst (command vifm . --choose-dir - $argv)
-    if test -z "$dst"
-        echo 'Directory picking cancelled/failed'
-        return 1
-    end
-    cd "$dst"
-end
+# function v
+#     set -l dst (command vifm . --choose-dir - $argv)
+#     if test -z "$dst"
+#         echo 'Directory picking cancelled/failed'
+#         return 1
+#     end
+#     cd "$dst"
+# end
 
 # fzf
 function FZF

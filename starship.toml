@@ -3,11 +3,11 @@ add_newline = true
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = false
+disabled = true
 
 [character]
-error_symbol = "[✗](bold red)"
-success_symbol = '[➜](bold green)'
+error_symbol = "[😱](bold red)"
+success_symbol = '[🙂](bold green)'
 vicmd_symbol = "[ V](bold green)"
 
 [directory]
@@ -35,7 +35,7 @@ disabled = false
 symbol = "  "
 
 [git_branch]
-symbol = " "
+symbol = " "
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
@@ -43,11 +43,12 @@ cherry_pick = '[🍒 PICKING](bold red)'
 
 [git_status]
 disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '⚔️ '
 ahead = '🏎️'
-behind = '🐢'
+behind = '🤡'
 diverged = '🖖'
-up_to_date = '✓'
+up_to_date = '🎖️'
 untracked = '🛰️'
 stashed = '📦'
 modified = '📝'
@@ -76,6 +77,7 @@ symbol = " "
 symbol = "λ "
 
 [python]
+format = '[$symbol($version )]($style)'
 disabled = false
 symbol = ' '
 
@@ -100,8 +102,8 @@ detect_files = ["CMakeLists.txt"]
 commands = [[ 'clang', '--version' ]]
 
 [conda]
-symbol = ' '
 format = '[$symbol$environment](dimmed yellow) '
+symbol = '󱔎 '
 
 [nodejs]
 format = '[ $version](bold green) '
