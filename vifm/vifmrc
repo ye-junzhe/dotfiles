@@ -462,7 +462,7 @@ nnoremap <c-y> :history<cr>
 
 " Quicker to quit
 command! CdOnQuit :execute '!echo %d > ~/.config/vifm/lastdir' | quit
-nnoremap Q :CdOnQuit<cr>
+nnoremap Q :quit<cr>
 nnoremap <c-q> :CdOnQuit<cr>
 
 " Move between tabs

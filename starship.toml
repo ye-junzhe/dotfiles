@@ -6,21 +6,83 @@ add_newline = true
 disabled = true
 
 [character]
-error_symbol = "[😱](bold red)"
-success_symbol = '[🙂](bold green)'
+error_symbol = "[✖](bold red)"
+success_symbol = '[](bold green)'
 vicmd_symbol = "[ V](bold green)"
+
+[username]
+format = '\[[$user]($style)\]'
+style_user = "bold dimmed blue"
+show_always = false
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[memory_usage]
+disabled = true
+symbol = '󰍛 '
+format = "[$symbol${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed blue"
 
 [directory]
 truncate_to_repo = false
-read_only = '🔒'
-truncation_length = 0
+read_only = ' '
+truncation_length = 3
 style = "bold italic blue"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
 [cmd_duration]
 min_time = 4
 show_milliseconds = false
-disabled = false
+disabled = true
 style = "bold italic red"
+
+[git_branch]
+symbol = " "
+always_show_remote = false
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒PICKING](bold red)'
+rebase = '[🌱REBASING](bold green)'
+merge = '[ MERGING](bold yellow)'
+
+[git_status]
+disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = '⚔️'
+ahead = '🏎️'
+behind = '🤡'
+diverged = '🖖'
+up_to_date = '🍻'
+untracked = '🛰️'
+stashed = '📦'
+modified = '✏️'
+staged = '[💾\($count\)](green)'
+renamed = '🪪'
+deleted = '🗑️'
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[custom.git_last_commit]
+disabled = true
+description = "Display last commit hash and message"
+command = "git show -s --format='%h \"%s\"'"
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+style = "bright-yellow bold"
+format = "[$output]($style) "
 
 [docker_context]
 symbol = " "
@@ -32,45 +94,24 @@ detect_folders = []
 disabled = false
 
 [aws]
-symbol = "  "
+symbol = " "
 
-[git_branch]
-symbol = " "
-
-[git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = '[🍒 PICKING](bold red)'
-
-[git_status]
-disabled = false
-format = '([\[$all_status$ahead_behind\]]($style) )'
-conflicted = '⚔️ '
-ahead = '🏎️'
-behind = '🤡'
-diverged = '🖖'
-up_to_date = '🎖️'
-untracked = '🛰️'
-stashed = '📦'
-modified = '📝'
-staged = '[++\($count\)](green)'
-renamed = '🪪'
-deleted = '🗑️'
-
-[git_commit]
-commit_hash_length = 0
-tag_disabled = true
-only_detached = true
 
 [battery]
 disabled = false
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
+full_symbol = "🔋 "
+charging_symbol = "🔌 "
+discharging_symbol = "⚡ "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
 
 [golang]
 symbol = " "
 
 [java]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [haskell]

@@ -50,8 +50,10 @@ fish_add_path /Users/mcf4r/go/bin
 # 添加 .NET Core SDK 工具
 fish_add_path /Users/mcf4r/.dotnet/tools
 
-# cargo
+# cargo & rustup
 fish_add_path ~/.cargo/bin/
+# env RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup rustup install stable # for stable
+# env RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup rustup install nightly # for nightly
 
 # HOMEBREW
 fish_add_path "/opt/homebrew/bin/"
