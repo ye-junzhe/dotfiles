@@ -52,8 +52,8 @@ fish_add_path /Users/mcf4r/.dotnet/tools
 
 # cargo & rustup
 fish_add_path ~/.cargo/bin/
-# env RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup rustup install stable # for stable
-# env RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup rustup install nightly # for nightly
+set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup # for stable
+set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup # for nightly
 
 # HOMEBREW
 fish_add_path "/opt/homebrew/bin/"

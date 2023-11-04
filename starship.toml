@@ -36,10 +36,10 @@ truncation_length = 3
 style = "bold italic blue"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
 
 [cmd_duration]
 min_time = 4
@@ -68,7 +68,7 @@ up_to_date = '🍻'
 untracked = '🛰️'
 stashed = '📦'
 modified = '✏️'
-staged = '[💾\($count\)](green)'
+staged = '[💾++\($count\)](green)'
 renamed = '🪪'
 deleted = '🗑️'
 
