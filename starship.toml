@@ -108,9 +108,11 @@ threshold = 30
 style = "bold red"
 
 [golang]
+disabled = true
 symbol = " "
 
 [java]
+disabled = true
 format = '[$symbol($version )]($style)'
 symbol = " "
 
@@ -150,6 +152,7 @@ symbol = '󱔎 '
 format = '[ $version](bold green) '
 
 [swift]
+disabled = true
 symbol = "ﯣ "
 
 [lua]
