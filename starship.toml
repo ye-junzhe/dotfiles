@@ -1,0 +1,160 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[character]
+error_symbol = "[✖](bold red)"
+success_symbol = '[](bold green)'
+vicmd_symbol = "[ V](bold green)"
+
+[username]
+format = '\[[$user]($style)\]'
+style_user = "bold dimmed blue"
+show_always = false
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[memory_usage]
+disabled = true
+symbol = '󰍛 '
+format = "[$symbol${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed blue"
+
+[directory]
+truncate_to_repo = false
+read_only = ' '
+truncation_length = 3
+style = "bold italic blue"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = true
+style = "bold italic red"
+
+[git_branch]
+symbol = " "
+always_show_remote = false
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒PICKING](bold red)'
+rebase = '[🌱REBASING](bold green)'
+merge = '[ MERGING](bold yellow)'
+
+[git_status]
+disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = '⚔️'
+ahead = '🏎️'
+behind = '🤡'
+diverged = '🖖'
+up_to_date = '🍻'
+untracked = '🛰️'
+stashed = '📦'
+modified = '✏️'
+staged = '[💾++\($count\)](green)'
+renamed = '🪪'
+deleted = '🗑️'
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[custom.git_last_commit]
+disabled = true
+description = "Display last commit hash and message"
+command = "git show -s --format='%h \"%s\"'"
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+style = "bright-yellow bold"
+format = "[$output]($style) "
+
+[docker_context]
+symbol = " "
+format = "[$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[aws]
+symbol = " "
+
+
+[battery]
+disabled = false
+full_symbol = "🔋 "
+charging_symbol = "🔌 "
+discharging_symbol = "⚡ "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[golang]
+disabled = true
+symbol = " "
+
+[java]
+disabled = true
+format = '[$symbol($version )]($style)'
+symbol = " "
+
+[haskell]
+symbol = "λ "
+
+[python]
+format = '[$symbol($version )]($style)'
+disabled = false
+symbol = ' '
+
+[ruby]
+disabled = true
+symbol = ' '
+
+[cmake]
+format = '[$symbol($version )]($style)'
+disabled = true
+
+[git_metrics]
+format = '([+$added]($added_style)) ([-$deleted]($deleted_style)) '
+
+[rust]
+format = '[ $version](#CB4B16 bold) '
+
+[c]
+symbol = ''
+format = '[$symbol $name\($version\)]($style) '
+detect_files = ["CMakeLists.txt"]
+commands = [[ 'clang', '--version' ]]
+
+[conda]
+format = '[$symbol$environment](dimmed yellow) '
+symbol = '󱔎 '
+
+[nodejs]
+format = '[ $version](bold green) '
+
+[swift]
+disabled = true
+symbol = "ﯣ "
+
+[lua]
+symbol = ''
+format = '[$symbol\($version\)](dimmed blue) '
