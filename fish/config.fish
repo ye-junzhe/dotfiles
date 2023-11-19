@@ -16,9 +16,9 @@ alias ssc="nvim ~/.config/starship.toml"
 ## Replacement
 alias ls="exa --icons"
 alias cat="bat"
-alias make="gmake"
+# alias make="gmake"
 alias v="vifm"
-alias ld="ld.lld"
+# alias ld="ld.lld"
 ## Shortcut
 alias cl="clear"
 alias home="cd ~"
@@ -29,6 +29,7 @@ alias vscode="/applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
 alias nn="neovide"
 alias nv="/opt/homebrew/bin/nvim"
 alias todo="/Users/mcf4r/Dev/Software/todo.c/todo"
+alias dora='dora-cli'
 
 set -U EDITOR nvim
 set -U VISUAL nvim
@@ -48,10 +49,10 @@ fish_add_path /Users/mcf4r/.dotnet/tools
 
 # cargo & rustup
 fish_add_path ~/.cargo/bin/
-set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup # for stable
+# set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup # for stable
 # set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup # for nightly
-# set -x RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
-# set -x RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup
+set -x RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
+set -x RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # HOMEBREW
 fish_add_path "/opt/homebrew/bin/"

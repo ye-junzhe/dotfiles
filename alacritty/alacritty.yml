@@ -512,7 +512,7 @@ color_schemes:
 
 
 
-colors: *mocha
+# colors: *mocha
 
 cursor:
   # Cursor style

@@ -2441,6 +2441,6 @@ map kitty_mod+p>y kitten hints --type hyperlink
 
 
 # BEGIN_KITTY_THEME
-# Tango Dark
+# Catppuccin Kitty Mocha
 include current-theme.conf
 # END_KITTY_THEME
