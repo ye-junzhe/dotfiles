@@ -63,7 +63,7 @@ window:
   #     - buttonless: Title bar, transparent background and no title bar buttons
   decorations: buttonless
 
-  opacity: 1.0
+  opacity: 0.8
 
   # Startup Mode (changes require restart)
   #
@@ -512,7 +512,7 @@ color_schemes:
 
 
 
-# colors: *mocha
+colors: *mocha
 
 cursor:
   # Cursor style
@@ -567,7 +567,7 @@ cursor:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
- program: /opt/homebrew/bin/fish
+# program: /opt/homebrew/bin/zsh
 #  args:
 #    - --login
 
