@@ -48,6 +48,7 @@ disabled = true
 style = "bold italic red"
 
 [git_branch]
+# disabled = true
 symbol = " "
 always_show_remote = false
 
