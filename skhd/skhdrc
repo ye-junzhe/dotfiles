@@ -47,7 +47,7 @@ shift + alt - l : yabai -m window --swap east
 
 # window misc
 alt - r : yabai -m space --rotate 90
-alt - f : yabai -m window --toggle zoom-fullscreen
+alt - m : yabai -m window --toggle zoom-fullscreen
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - x : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2

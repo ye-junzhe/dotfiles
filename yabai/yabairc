@@ -50,7 +50,7 @@ yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 yabai -m rule --add label="Select file to save to" app="^Inkscape$" title="Select file to save to" manage=off
-yabai -m rule --add app="^(安装器|IINA|mpv|Firefox|Kap|Alfred Preferences|Arc|便笺|网易云音乐|Discord|Google Chrome|DeepL|系统设置|备忘录|邮件|CleanMyMac X|计算器|Notion|QQ|腾讯会议|微信|SwitchResX Control|Spotify|GitKraken|GitHub Desktop|Spotify)$" manage=off
+yabai -m rule --add app="^(Thorium|预览|Microsoft PowerPoint|Thunderbird|安装器|IINA|mpv|Firefox|Kap|Alfred Preferences|Arc|便笺|网易云音乐|Discord|Google Chrome|DeepL|系统设置|备忘录|邮件|CleanMyMac X|计算器|Notion|QQ|腾讯会议|微信|SwitchResX Control|Spotify|GitKraken|GitHub Desktop|Spotify)$" manage=off
 
 yabai -m config layout bsp
 
