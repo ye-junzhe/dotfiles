@@ -42,6 +42,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git >> ~/Dev/Soft
 git clone https://github.com/zsh-users/zsh-autosuggestions >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
 git clone https://github.com/zsh-users/zsh-history-substring-search >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
 git clone https://github.com/MichaelAquilina/zsh-auto-notify.git >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
+git clone https://github.com/hlissner/zsh-autopair.git >> ~/Dev/Software/zsh_plugins/zsh-autopair
 
 source ~/Dev/Software/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/Dev/Software/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -51,6 +52,7 @@ bindkey '^n' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 source ~/Dev/Software/zsh_plugins/zsh-auto-notify/auto-notify.plugin.zsh
+source ~/.config/zsh/plugins/zsh-autopair/autopair.zsh
 
 # todo.c
 ```
@@ -134,6 +136,9 @@ source ~/Dev/Software/zsh_plugins/zsh-auto-notify/auto-notify.plugin.zsh
 # CASE_INSENSITIVE
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# zsh-autopair
+source ~/.config/zsh/plugins/zsh-autopair/autopair.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
