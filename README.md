@@ -38,11 +38,11 @@ git clone https://github.com/ye-junzhe/dotfiles.git
 # llvm
 
 # zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
-git clone https://github.com/zsh-users/zsh-autosuggestions >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
-git clone https://github.com/zsh-users/zsh-history-substring-search >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git >> ~/Dev/Software/zsh_plugins/zsh-syntax-highlighting/
+git clone https://github.com/zsh-users/zsh-autosuggestions >> ~/Dev/Software/zsh_plugins/zsh-autosuggestions/
+git clone https://github.com/zsh-users/zsh-history-substring-search >> ~/Dev/Software/zsh_plugins/zsh-history-substring-search/
 git clone https://github.com/MichaelAquilina/zsh-auto-notify.git >> ~/Dev/Software/zsh_plugins/zsh-auto-notify/
-git clone https://github.com/hlissner/zsh-autopair.git >> ~/Dev/Software/zsh_plugins/zsh-autopair
+git clone https://github.com/hlissner/zsh-autopair.git >> ~/Dev/Software/zsh_plugins/zsh-autopair/
 
 source ~/Dev/Software/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/Dev/Software/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
