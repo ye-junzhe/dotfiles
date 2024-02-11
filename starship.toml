@@ -39,10 +39,11 @@ truncation_length = 3
 style = "bold italic blue"
 
 [directory.substitutions]
-"Documents" = "󰈙"
+"Documents" = "💼"
 "Downloads" = ""
-"Music" = ""
+"Music" = "🎵"
 "Pictures" = ""
+"Dev" = "🧑‍💻"
 
 [cmd_duration]
 min_time = 4
