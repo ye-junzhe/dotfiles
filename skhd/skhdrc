@@ -52,7 +52,7 @@ alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - x : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 alt - e : yabai -m window --toggle split
-alt - b : yabai -m space --balance
+alt - = : yabai -m space --balance
 
 # HACK: 切换显示器焦点
 # ctrl + alt - x  : yabai -m display --focus recent

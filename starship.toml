@@ -146,7 +146,7 @@ format = '[ $version](#CB4B16 bold) '
 [c]
 symbol = ''
 format = '[$symbol $name\($version\)]($style) '
-detect_files = ["CMakeLists.txt"]
+detect_files = ["CMakeLists.txt", "*.c"]
 commands = [[ 'clang', '--version' ]]
 
 [conda]

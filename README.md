@@ -3,7 +3,7 @@
 ## Linux Env Setup
 
 ```bash
-sudo apt install autojump exa zsh bat vifm gh make fzf ripgrep tldr btop
+sudo apt install autojump eza zsh bat vifm gh make fzf ripgrep tldr btop
 
 # Neovim: https://github.com/neovim/neovim/blob/master/BUILD.md
 sudo apt-get install ninja-build gettext cmake unzip curl
@@ -35,8 +35,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # dotfiles(vifm starship)
 git clone https://github.com/ye-junzhe/dotfiles.git
 
-# llvm
-
 # zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git >> ~/Dev/Software/zsh_plugins/zsh-syntax-highlighting/
 git clone https://github.com/zsh-users/zsh-autosuggestions >> ~/Dev/Software/zsh_plugins/zsh-autosuggestions/
@@ -54,12 +52,23 @@ bindkey '^[[B' history-substring-search-down
 source ~/Dev/Software/zsh_plugins/zsh-auto-notify/auto-notify.plugin.zsh
 source ~/.config/zsh/plugins/zsh-autopair/autopair.zsh
 
-# todo.c
-```
 
 ```bash
 # starship
 eval "$(starship init zsh)"
+
+#set history size
+export HISTSIZE=10000
+#save history after logout
+export SAVEHIST=10000
+#history file
+export HISTFILE=~/.zhistory
+#append into history file
+setopt INC_APPEND_HISTORY
+#save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+#add timestamp for each entry
+setopt EXTENDED_HISTORY
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -88,7 +97,7 @@ alias vimconfig="nvim ~/.vimrc"
 alias rust="evcxr"
 alias ssc="nvim ~/.config/starship.toml"
 ## Replacement
-alias ls="exa --icons"
+alias ls="eza --icons -h --git -a"
 alias cat="bat"
 # alias make="gmake"
 alias v="vifm"
@@ -101,18 +110,21 @@ alias e="exit"
 alias op="open ."
 alias code="/applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias nn="neovide"
-alias nv="nvim"
+alias nv="/opt/homebrew/bin/nvim"
 alias todo="/Users/mcf4r/Dev/Software/todo.c/todo"
-alias dora='dora-cli'
+alias de='kitty +kitten ssh junzhe@10.211.55.3'
+alias as='kitty +kitten ssh root@121.36.226.110'
+alias rc='
+    echo "[RUSTUP COMPONENT]:"
+    rustup component list --installed
+    echo "\n[RUSTUP TARGET]:"
+    rustup target list --installed
+    echo "\n[RUSTUP TOOLCHAIN]:"
+    rustup toolchain list'
+alias draw='/Users/mcf4r/Dev/Software/aseprite/build/bin/aseprite'
 
 export EDITOR=nvim
 export VISUAL=nvim
-
-# cargo & rustup
-export PATH="$HOME/.cargo/bin/:$PATH"
-export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
-export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
-
 
 # autojump
 source /usr/share/autojump/autojump.sh
@@ -144,3 +156,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion#
 ```
+
+# cargo & rustup
+export PATH="$HOME/.cargo/bin/:$PATH"
+export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
